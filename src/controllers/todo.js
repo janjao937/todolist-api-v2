@@ -67,7 +67,7 @@ export const updateTodo = catchAsync(async (req, res, next) => {
     const todo = await todoService.updateTodo(
         {
             task: task.trim(),
-            status: !!status,
+            status: !!status, //  false !true !"false" 
             date: date,
         },
         id
@@ -81,3 +81,6 @@ export const removeTodo = catchAsync(async (req, res, next) => {
     await todoService.removeTodo(id);
     res.status(204).json();
 });
+
+
+

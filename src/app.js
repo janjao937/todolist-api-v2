@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/auth', authRoute);
-app.use('api/todos', todoRoute);
+app.use('/api/todos', todoRoute);
 
 app.use(notFoundMiddleware);
 app.use(errorMiddleware);
